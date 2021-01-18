@@ -16,7 +16,7 @@ MainWindow::MainWindow(QWidget *parent) :
 //    ftp->login("qtertest/qtftptest", "pwd123456");
 //    ftp->get("readme.txt");
     ftp->connectToHost("39.102.43.157");
-    ftp->login("zhang", "zhang123456");
+    ftp->login("zhang33333", "zhang123456");
     ftp->get("0.txt");
     ftp->close();
     connect(ftp, &QFtp::commandStarted,

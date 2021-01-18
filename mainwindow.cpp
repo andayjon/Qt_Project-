@@ -70,9 +70,10 @@ void MainWindow::ftpCommandFinished(int, bool error)
             qDebug()<< QString("登录成功") <<endl;
         }
     } else if (ftp->currentCommand() == QFtp::Get) {
-        if(error)
+        if(error) {
             ui->label->setText(tr("下载出现错误：%1").arg(ftp->errorString()));
-        else {
+            qDebug()<< QString("下载出现错误：%1").arg(ftp->errorString()) <<endl;
+        }else {
             ui->label->setText(tr("已经完成下载"));
             QTextCodec *codec = QTextCodec::codecForName("GBK");//修改这两行
 //            QTextCodec *codec = QTextCodec::codecForLocale();

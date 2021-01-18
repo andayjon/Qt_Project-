@@ -17,7 +17,7 @@ MainWindow::MainWindow(QWidget *parent) :
 //    ftp->get("readme.txt");
     ftp->connectToHost("39.102.43.157");
     ftp->login("zhang", "zhang123456");
-    ftp->get("1.txt");
+    ftp->get("210.txt");
     ftp->close();
     connect(ftp, &QFtp::commandStarted,
             this, &MainWindow::ftpCommandStarted);
